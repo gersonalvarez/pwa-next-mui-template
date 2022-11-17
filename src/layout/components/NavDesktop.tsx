@@ -30,7 +30,7 @@ const NavDesktop = ({
       <Breadcrumbs separator={<Separador simbolo=">" />}>
         <Stack alignItems="center" direction="row" spacing={1}>
           <Link href="/" underline="none" color="inherit" fontWeight="bold">
-            <Typography variant="inherit">NextJS</Typography>
+            <Typography variant="inherit">Painter Seachers</Typography>
           </Link>
         </Stack>
 
