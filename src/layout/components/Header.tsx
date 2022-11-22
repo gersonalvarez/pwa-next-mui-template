@@ -1,8 +1,8 @@
 import {
   AppRegistration,
   Login,
-  MonetizationOn,
-  Web,
+  Recommend,
+  Brush,
 } from "@mui/icons-material";
 import { Box } from "@mui/material";
 import Head from "next/head";
@@ -12,14 +12,14 @@ import NavMobile from "./NavMobile";
 
 const linksLeft = [
   {
-    label: "Plantillas",
-    href: "/plantillas",
-    icon: <Web />,
+    label: "Pintores",
+    href: "/pintores",
+    icon: <Brush />,
   },
   {
-    label: "Precios",
-    href: "/precios",
-    icon: <MonetizationOn />,
+    label: "Favoritos",
+    href: "/favoritos",
+    icon: <Recommend />,
   },
 ];
 
@@ -47,7 +47,7 @@ const Header = () => (
       />
       <meta name="description" content="Description" />
       <meta name="keywords" content="Keywords" />
-      <title>Next.js PWA Example</title>
+      <title>Painter Seachers</title>
 
       <link rel="manifest" href="/manifest.json" />
       <meta name="theme-color" content="#317EFB" />

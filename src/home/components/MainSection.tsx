@@ -7,9 +7,9 @@ import {
 } from "@mui/material";
 
 const MainSection = () => {
-  const title = "Vos queres crecer.\n Nosotros te queremos ayudar";
+  const title = "Encuentra Al Pintor.\n Que Buscas Aquí";
   const subtitle =
-    "Crea una web con plantillas impecables, fácil edición y sin codificación.";
+    "Painter Searcher es una página web diseñada para quienes necesiten un/a pintor/a cerca de su ubicación .";
   const sm = useMediaQuery("min-width(600px)");
 
   return (
@@ -83,7 +83,7 @@ const MainSection = () => {
         <Box
           gridArea={"img"}
           sx={{
-            backgroundImage: `url("https://picsum.photos/1200/800")`,
+            backgroundImage: `url("https://rodapin.com/wp-content/uploads/2021/05/pintar-las-paredes-de-tu-casa.jpeg")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
