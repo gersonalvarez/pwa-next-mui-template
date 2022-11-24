@@ -77,7 +77,7 @@ const MainSection = () => {
             sm: "left",
           }}
         >
-          <Button variant="contained">Comienza a crear</Button>
+          <Button variant="contained">Encuentralo ahora</Button>
         </Box>
 
         <Box
