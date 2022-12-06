@@ -32,7 +32,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 }));
 
 const pintores = [
-  { barrio: 'Lugano 1 y 2'},
+  { barrio: 'Lugano 1 y 2',nombre:"Juan",imagen:""},
   { barrio: 'Lugano 1 y 2'},
   { barrio: 'Lugano 1 y 2'},
   { barrio: 'Caballito'},
@@ -61,7 +61,7 @@ export default function RecipeReviewCard() {
             avatar={
               <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
             }
-            title="Carlos Escalera"
+            title={pintor.nombre}
             subheader={pintor.barrio}
           />
           <CardMedia
