@@ -6,6 +6,7 @@ import OnlineSaleSection from "./components/OnlineSaleSection";
 import PlansSection from "./components/PlansSection";
 import StepsToDeploySection from "./components/StepsToDeploySection";
 import TemplateCustomSection from "./components/TemplateCustomSection";
+import Buscador from "./components/Buscador";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
 
       <Container maxWidth={false} className="background-light">
         <Container>
+        <Buscador></Buscador>
           <Stack spacing={8} py={8}>
             <PlansSection />
             
