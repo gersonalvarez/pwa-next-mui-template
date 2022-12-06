@@ -14,6 +14,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Grid } from "@mui/material";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -30,64 +31,55 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
+const todosLosPintores = [
+  { barrio: 'Lugano 1 y 2'},
+  { barrio: 'Lugano 1 y 2'},
+  { barrio: 'Lugano 1 y 2'},
+  { barrio: 'Caballito'},
+  { barrio: 'Caballito'},
+  { barrio: 'Caballito'},
+  { barrio: 'Caballito'},
+  { barrio: 'Boedo'},
+  { barrio: 'Boedo'},
+]
+
+var pintores = todosLosPintores;
+
+
 export default function RecipeReviewCard() {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
-  return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Carlos Escalera"
-        subheader="Lugano 1 y 2"
-      />
-      <CardMedia
-        component="img"
-        height="180"
-        image="https://www.milideas.net/wp-content/uploads/dormitorios-encantadores-1.jpg"
-        alt="Casa"
-      />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          Me llamo Carlos vivo en Celina y trabajo hace 5 años.
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>Heat 1/2 cup of the broth in a</Typography>
-        </CardContent>
-      </Collapse>
-    </Card>
-    
-    
-    
-  );
   
+  return (
+    <Grid container spacing={8}>
+    {Array.from(pintores).map((pintor, _) => (
+        <Grid item xs={4}>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardHeader
+            avatar={
+              <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+            }
+            title="Carlos Escalera"
+            subheader={pintor.barrio}
+          />
+          <CardMedia
+            component="img"
+            height="180"
+            image="https://www.milideas.net/wp-content/uploads/dormitorios-encantadores-1.jpg"
+            alt="Casa"
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+              Me llamo Carlos vivo en Celina y trabajo hace 5 años.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+    ))}
+    </Grid>
+  );
+
 }
