@@ -31,7 +31,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-const todosLosPintores = [
+const pintores = [
   { barrio: 'Lugano 1 y 2'},
   { barrio: 'Lugano 1 y 2'},
   { barrio: 'Lugano 1 y 2'},
@@ -43,7 +43,6 @@ const todosLosPintores = [
   { barrio: 'Boedo'},
 ]
 
-var pintores = todosLosPintores;
 
 
 export default function RecipeReviewCard() {
@@ -55,8 +54,8 @@ export default function RecipeReviewCard() {
   
   return (
     <Grid container spacing={8}>
-    {Array.from(pintores).map((pintor, _) => (
-        <Grid item xs={4}>
+    {pintores.map((pintor, index) => (
+        <Grid item xs={4} key={index}>
         <Card sx={{ maxWidth: 345 }}>
           <CardHeader
             avatar={
